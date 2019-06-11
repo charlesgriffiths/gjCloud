@@ -27,9 +27,11 @@ import gjCloud.*;
   GJTransaction.appPrivateKey = "";    // get this from your GameJolt dashboard
   GJTransaction.userName = gjapi_username;  // retrieved earlier
   GJTransaction.userAuth = gjapi_token;     // retrieved earlier
+~~~~
 
 And then do something like one of the following:
 
+~~~~
 var tr:GJTransaction;
   
   // call right away
