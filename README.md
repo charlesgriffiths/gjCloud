@@ -4,22 +4,23 @@ haxe library for GameJolt cloud api version 1.2
 
 With an html target, username and auth token are passed as arguments and can be retrieved with something like the following.
 
+~~~~
 import js.html.URLSearchParams;
 
 var url:String = document.URL;
 
   if (-1 != url.indexOf( "index.html?" ))
-	{
-	var usp = new URLSearchParams( url.split( "index.html?" )[1] );
+  {
+  var usp = new URLSearchParams( url.split( "index.html?" )[1] );
 
-	  gjapi_username = usp.get( "gjapi_username" );
-		gjapi_token = usp.get( "gjapi_token" );
-	}
-
-
+    gjapi_username = usp.get( "gjapi_username" );
+    gjapi_token = usp.get( "gjapi_token" );
+  }
+~~~~
 
 To call an api function, first set the appropriate static variables in gjCloud.GJTransaction
 
+~~~~
 import gjCloud.*;
 
   GJTransaction.appID = "000000";      // get this from your GameJolt dashboard
@@ -54,4 +55,4 @@ var tr:GJTransaction;
 
   function gj_callbackdata():Void {}
   function gj_callbackerror():Void {}
-
+~~~~
